@@ -36,5 +36,5 @@ cat $subdomain_path/found.txt | grep $domain | sort -u | httprobe -prefer-https 
 echo -e "${RED} [+] Taking screenshots of alive subdomains... ${RESET}"
 gowitness file -f $subdomain_path/alive.txt -P $screenshot_path/ --no-http
 
-echo -e "${RED} [+] Running nmap on alive subdomains... ${RESET}"
-nmap -iL $subdomain_path/alive.txt -T4 -A -p- -oN $scan_path/nmap.txt
+#echo -e "${RED} [+] Running nmap on alive subdomains... ${RESET}"
+#nmap -iL $subdomain_path/alive.txt -T4 -A -p- -oN $scan_path/nmap.txt
